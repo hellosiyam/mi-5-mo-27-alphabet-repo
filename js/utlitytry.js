@@ -1,25 +1,27 @@
-function elementHiddenById(elements) {
-    const element = document.getElementById(elements);
-    element.classList.add('hidden'); 
+function removeCladdById(events) {
+    const event = document.getElementById(events);
+    event.classList.add('hidden');
 }
 
-function elementVisibleById(elements) {
-    const element = document.getElementById(elements);
-    element.classList.remove('hidden')
+function addClassById(events) {
+    const event = document.getElementById(events);
+    event.classList.remove('hidden');
 }
 
-function generaetRendomAlpabet() {
+function generateRendomAlpabet() {
     const stringAlpabet = 'abcdefghijklmnopqrstuvwxyz';
-    const indexAlpabet = stringAlpabet.split('');
+    const index = stringAlpabet.split('');
 
     const rendomMath = Math.random()*25;
-    const value = Math.round(rendomMath);
+    const rendomValue = Math.round(rendomMath);
 
-    const getAlpabet = indexAlpabet[value];
-    return getAlpabet;
+    const alpabet = index[rendomValue];
+    return alpabet;
 }
 
-function setColorBotton(elements) {
-    const element = document.getElementById(elements);
-    element.classList.add('bg-amber-500')
+function setColor(events) {
+    const event = document.getElementById(events);
+    event.classList.add('bg-orange-500');
+    const isColor = event;
+    return isColor;
 }

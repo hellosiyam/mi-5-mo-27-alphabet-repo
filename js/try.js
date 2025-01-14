@@ -1,16 +1,15 @@
 function setAlpabet() {
-    const isAlpabet = generaetRendomAlpabet();
+    const isAlpabet = generateRendomAlpabet();
     
-    const displayText = document.getElementById('display');
-    displayText.innerText = isAlpabet;
+    const showDisplay = document.getElementById('display');
+    showDisplay.innerText=isAlpabet;
 
-    setColorBotton(isAlpabet);
-    
+    setColor(isAlpabet);
     
 }
 
 function play() {
-    elementHiddenById('home');
-    elementVisibleById('play-ground')
-    setAlpabet()
+    removeCladdById('home');
+    addClassById('play-ground');
+    setAlpabet();
 }
