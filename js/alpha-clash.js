@@ -8,7 +8,19 @@
 //     showPlayground.classList.remove('hidden');
 // }
 
+
+    
+function callGame() {
+    const game = getRendomAlpabet();
+    
+    const displayAlpabet = document.getElementById('display');
+    displayAlpabet.innerText = game;
+
+    setColorById(game);  
+}
+
 function play() {
     addElementById('home')
     remvoElementById('play-ground')
+    callGame();
 }
