@@ -1,3 +1,4 @@
+// Page Heddine
 function addElementById(elements) {
     const element = document.getElementById(elements);
     element.classList.add('hidden');
@@ -8,6 +9,7 @@ function remvoElementById(elements) {
     element.classList.remove('hidden')
 }
 
+// Generate Rendom Alpabet
 function getRendomAlpabet() {
     const stringAlpabet = 'abcdefghijklmnopqrstuvwxyz'
     const spliteAlpabet = stringAlpabet.split('');
@@ -19,6 +21,7 @@ function getRendomAlpabet() {
     return value;
 }
 
+// Set Background Color
 function setColorById(elements) {
    const element = document.getElementById(elements);
    element.classList.add('bg-amber-500');
