@@ -22,6 +22,4 @@ function generateRendomAlpabet() {
 function setColor(events) {
     const event = document.getElementById(events);
     event.classList.add('bg-orange-500');
-    const isColor = event;
-    return isColor;
 }
