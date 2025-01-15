@@ -26,3 +26,8 @@ function setColorById(elements) {
    const element = document.getElementById(elements);
    element.classList.add('bg-amber-500');
 }
+
+function removeBackgroundColorById(elements) {
+    const element = document.getElementById(elements);
+    element.classList.remove('bg-amber-500');
+}

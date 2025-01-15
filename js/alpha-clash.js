@@ -15,8 +15,9 @@ function KeyPressed(events) {
     const getAlpabet = displayAlpabet.innerText;
     const expectAlpabet = getAlpabet.toLocaleLowerCase();
 
-    if (expectAlpabet === playerPressed) {
-        console.log('You pressed right key & you get 1 life');
+    if (playerPressed === expectAlpabet) {
+        removeBackgroundColorById(expectAlpabet);
+        callGame();
     }
     else{
         console.log("you pressed wrong key & lost 1 life");
