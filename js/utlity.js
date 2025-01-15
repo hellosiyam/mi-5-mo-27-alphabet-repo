@@ -31,3 +31,16 @@ function removeBackgroundColorById(elements) {
     const element = document.getElementById(elements);
     element.classList.remove('bg-amber-500');
 }
+
+// Remove Value 
+function getValueElementById(elements) {
+    const element = document.getElementById(elements);
+    const valueString = element.innerText;
+    const value = parseInt(valueString);
+    return value;
+}
+
+function setValueById(elements, value) {
+    const element = document.getElementById(elements);
+    element.innerText = value;
+}

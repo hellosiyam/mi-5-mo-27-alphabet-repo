@@ -16,23 +16,21 @@ function KeyPressed(events) {
     const expectAlpabet = getAlpabet.toLocaleLowerCase();
 
     if (playerPressed === expectAlpabet) {
-
-        const scoreUpdate = document.getElementById('scoreVlue');
-        const currentScore = scoreUpdate.innerText;
-        const myScore = parseInt(currentScore);
-        const totalPoint = myScore + 1;
-        scoreUpdate.innerText = totalPoint;
+        const incressVlaue = getValueElementById('scoreVlue');
+        const value = incressVlaue + 1;
+        setValueById('scoreVlue', value)
         removeBackgroundColorById(expectAlpabet);
         callGame();
 
     }
     else{
         console.log("you pressed wrong key & lost 1 life");
-        const life = document.getElementById('lifeSpend');
-        const lifeString = life.innerText;
-        const lifeValue = parseInt(lifeString);
-        const afterLife = lifeValue - 1;
-        life.innerText = afterLife;
+        const lifeSpend = getValueElementById('lifeSpend');
+        const life = lifeSpend - 1 ;
+        setValueById('lifeSpend', life);
+        if (life === 0) {
+            gameOver()          
+        }
     }
     
 }
@@ -52,4 +50,9 @@ function play() {
     addElementById('home')
     remvoElementById('play-ground')
     callGame();
+}
+
+function gameOver() {
+    addElementById('play-ground');
+    remvoElementById('score-page')  
 }
