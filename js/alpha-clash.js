@@ -26,7 +26,6 @@ function KeyPressed(events) {
 
     }
     else{
-        console.log("you pressed wrong key & lost 1 life");
         const lifeSpend = getValueElementById('lifeSpend');
         const life = lifeSpend - 1 ;
         setValueById('lifeSpend', life);
