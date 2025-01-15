@@ -10,7 +10,9 @@
 
 function KeyPressed(events) {
     const playerPressed = events.key;
-
+    if (playerPressed === 'Escape') {
+        gameOver();
+    }
     const displayAlpabet = document.getElementById('display');
     const getAlpabet = displayAlpabet.innerText;
     const expectAlpabet = getAlpabet.toLocaleLowerCase();
