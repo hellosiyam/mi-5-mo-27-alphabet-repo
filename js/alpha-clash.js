@@ -8,7 +8,23 @@
 //     showPlayground.classList.remove('hidden');
 // }
 
+function KeyPressed(events) {
+    const playerPressed = events.key;
 
+    const displayAlpabet = document.getElementById('display');
+    const getAlpabet = displayAlpabet.innerText;
+    const expectAlpabet = getAlpabet.toLocaleLowerCase();
+
+    if (expectAlpabet === playerPressed) {
+        console.log('You pressed right key & you get 1 life');
+    }
+    else{
+        console.log("you pressed wrong key & lost 1 life");
+    }
+    
+}
+
+document.addEventListener('keyup',KeyPressed)
     
 function callGame() {
     const game = getRendomAlpabet();
