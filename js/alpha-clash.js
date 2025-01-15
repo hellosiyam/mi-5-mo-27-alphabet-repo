@@ -48,6 +48,9 @@ function callGame() {
 
 function play() {
     addElementById('home')
+    addElementById('score-page')
+    setValueById('scoreVlue', 0);
+    setValueById('lifeSpend', 5)
     remvoElementById('play-ground')
     callGame();
 }
