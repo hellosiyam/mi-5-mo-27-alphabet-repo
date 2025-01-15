@@ -21,6 +21,13 @@ function getRendomAlpabet() {
     return value;
 }
 
+// remove color Alpabet
+function removeAlpabetColor(elements) {
+    const element = document.getElementById(elements);
+    const alpabetElement = element.innerText;
+    return alpabetElement;
+}
+
 // Set Background Color
 function setColorById(elements) {
    const element = document.getElementById(elements);
@@ -44,3 +51,4 @@ function setValueById(elements, value) {
     const element = document.getElementById(elements);
     element.innerText = value;
 }
+

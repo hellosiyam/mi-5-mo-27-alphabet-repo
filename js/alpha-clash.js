@@ -57,5 +57,10 @@ function play() {
 
 function gameOver() {
     addElementById('play-ground');
-    remvoElementById('score-page')  
+    remvoElementById('score-page');
+    
+    const finalScore = getValueElementById('scoreVlue');
+    setValueById('last-score', finalScore);
+    const removeColor = removeAlpabetColor('display');
+    removeBackgroundColorById(removeColor);
 }
